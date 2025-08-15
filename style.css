@@ -23,6 +23,8 @@ header{
     grid-template-columns: 2fr 3fr;
     font-size: 2rem;
     border-bottom: 0.1rem solid #052E5B;
+    position: fixed;
+    top: 0;
 }
 
 
@@ -50,16 +52,18 @@ main{
     margin: auto;
 }
 
-.intro{
+#intro{
     width: 50%;
     margin: auto;
-    margin-top: 5rem;
+    margin-top: 15rem;
+    scroll-margin-top: 20rem;
+
 }
 
-.intro h1{
+#intro h1{
     font-size: 5rem;
 }
-.intro p{
+#intro p{
     font-size: 3rem;
     margin-top: 2rem;
 }
@@ -74,7 +78,7 @@ margin-bottom: 3rem;
 #Projects{
     display: flex;
     justify-content: space-between;
-
+    scroll-margin-top: 20rem;
 }
 .project{
     width: 25rem;
@@ -190,7 +194,7 @@ margin-top: 2rem;
 header{
     grid-template-columns: 1fr;
 }
-.intro{
+#intro{
     width: 90%;
 }
 #Projects{
@@ -219,7 +223,7 @@ justify-content: center;
 header{
     grid-template-columns: 2fr 3fr;
 }
-.intro{
+#intro{
     width: 80%;
 }
 #Projects{
@@ -234,10 +238,5 @@ justify-content: space-between;
     flex-direction: row;
     justify-content: space-evenly;
 }
-
-}
-
-/* Escritorio */
-@media (min-width: 64rem){
 
 }
