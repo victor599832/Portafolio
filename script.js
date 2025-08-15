@@ -8,7 +8,7 @@ form.addEventListener('submit', function (event) {
     let Asunto = document.getElementById('Asunto').value;
     let Mensaje = document.getElementById('Textarea').value;
     if (Nombre === '') {
-        alert('Rellenalo');
+        alert('Por favor, ingresa un nombre válido');
         return;
     }
 
@@ -19,7 +19,7 @@ form.addEventListener('submit', function (event) {
     }
 
      if (Asunto === '') {
-        alert('Rellenalo');
+        alert('Por favor, ingresa un asunto válido');
         return;
     }
 
@@ -36,5 +36,4 @@ form.addEventListener('submit', function (event) {
     });
    
 });
-
 
