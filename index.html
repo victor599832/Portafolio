@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor Miguel</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div>
+
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Sobre mi</a></li>
+                <li><a href="#">Proyectos</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h1>Soy Victor</h1>
+            <p>Estudiante de ingenieria y desarrollador en formacion con interes en el desarrollo web.
+                Buscando mejorar mis habilidades en HTML, CSS, Javascript y otras tecnologias.
+            </p>
+        </section>
+
+        <h2>Mis Proyectos</h2>
+        <section id="Projects">
+            <div class="project" class="project" target="_blank">
+                <a href="https://administrador-de-extenciones.vercel.app/" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/desktop-design-dark.jpg" alt="Proyecto1" class="img__pagina">
+                </a>
+                <div class="project__info">
+                    <p>Administrador de extenciones</p>
+                    <a href="https://github.com/victor599832/Administrador-de-extenciones" target="_blank">
+                        <img src="./assets/icons8-github.svg" alt="Github" class="github__logo">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <h2>Habilidades</h2>
+        <section id="Skills">
+            <div class="skill__logo">
+                <p>HTMl</p>
+                <img src="./assets/HTML5_Badge_512.png" alt="">
+            </div>
+            <div class="skill__logo">
+                <p>CSS</p>
+                <img src="./assets/CSS3_logo.svg" alt="">
+            </div>
+            <div class="skill__logo">
+                <p>Tailwind</p>
+                <img src="./assets/Tailwind_CSS_Logo.svg.png" alt="">
+            </div>
+            <div class="skill__logo">
+                <p>Javascript</p>
+                <img src="./assets/Unofficial_JavaScript_logo_2.svg.png" alt="">
+            </div>
+            <div class="skill__logo">
+                <p>Git</p>
+                <img src="./assets/Git_icon.svg.png" alt="">
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <form action="" method="post" id="Formulario">
+            <h3>Contacto</h3>
+                <input type="text" name="Nombre" id="Nombre" placeholder="Ingrese su nombre" >
+                <input type="text" name="Email" id="Email" placeholder="Ingrese su correo" >
+                <input type="text" name="Asunto" id="Asunto" placeholder="Ingrese el asunto" >
+                <textarea  name="Mensaje" id="Textarea" placeholder="Escriba su mensaje" >
+                </textarea>
+                <!-- <input type="text" name="Mensaje" id="Textarea" placeholder="Escriba su mensaje"> -->
+                <button type="submit" id="Enviar">Enviar</button>
+            </form>
+    </footer>
+
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+       emailjs.init('ZoYqTQCf2hQbeu4Gy');
+   })();
+</script>
+
+
+</body>
+
+</html>
