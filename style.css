@@ -31,7 +31,6 @@ header {
     height: 10rem;
     background-color: var(--principal);
     display: grid;
-    grid-template-columns: 2fr 3fr;
     font-size: 2rem;
     position: fixed;
     top: 0;
@@ -178,22 +177,21 @@ h2 {
 footer {
     background-color: var(--secundario);
     width: 100%;
-    height: 60rem;
+    min-height: 60rem;
     margin-top: 5rem;
     padding-top: 8rem;
-    /* border-top: 0.2rem solid var(--color6); */
-
+    padding-bottom: 5rem;
 }
 
 #Formulario {
     display: flex;
     flex-direction: column;
     width: 35rem;
-    height: 45rem;
-    background-color: #052E5B;
+    min-height: 45rem;
+    background-color: var(--fondo);
     padding: 3rem;
     margin: auto;
-    border-radius: 2rem;
+    border-radius: 1rem;
 }
 
 #Formulario input {
@@ -204,6 +202,7 @@ footer {
     border-radius: 0.5rem;
     padding-left: 1rem;
     border: none;
+    outline: none;
 }
 
 #Textarea {
@@ -213,6 +212,7 @@ footer {
     border-radius: 0.5rem;
     padding-left: 1rem;
     color: #141414;
+    outline: none;
 }
 
 h3 {
@@ -226,23 +226,61 @@ h3 {
     min-height: 4rem;
     cursor: pointer;
     font-size: 1.8rem;
-    background-color: #00142D;
+    background-color: var(--cards);
+    color: var(--color6);
     border: 0.1rem solid #052E5B;
     border-radius: 1rem;
     transition: 0.3s;
 }
 
 #Enviar:hover {
-    background-color: #6BB5E3;
-    color: #00142D;
+    background-color: var(--detalles);
+    color: var(--color6);
 }
 
+.error{
+    display: none;
+    margin-top: 1rem;
+}
 
+.error p{
+    color: red;
+    font-size: 1.4rem;
+}
+/* Mensaje */
+#Alerta {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    width: 30rem;
+    height: 8rem;
+    background-color: hsl(187, 24%, 22%);
+    top: -20rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: 1s;
+    z-index: 20;
+}
+#Alerta h4{
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+#Alerta img{
+    transform: scale(1.3);
+    margin-left: 4rem;
+}
+#Alerta.activa {
+    top: 3rem;
+
+}
 /* Media queris */
 /* Movil */
 @media (min-width: 20rem) {
     header {
         grid-template-columns: 1fr;
+        z-index: 10;
     }
 
     #intro {
@@ -250,13 +288,14 @@ h3 {
     }
 
     #Projects {
-        flex-direction: row;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .project {
+    .projects {
         width: 30rem;
         height: 35rem;
+        margin-top: 4rem;
     }
 
     .img__pagina {
@@ -268,23 +307,21 @@ h3 {
         flex-direction: column;
         margin-top: 2rem;
     }
-
+    .skill__logo{
+        margin-top: 3rem;
+    }
 
 }
 
 /* Tablet */
 @media (min-width: 48rem) {
-    header {
-        grid-template-columns: 2fr 3fr;
-    }
 
     #intro {
         width: 80%;
     }
 
     #Projects {
-        flex-direction: row;
-        justify-content: space-between;
+        display: flex;
     }
 
     .project {
@@ -296,5 +333,16 @@ h3 {
         flex-direction: row;
         justify-content: space-evenly;
     }
+}
+/* Laptop */
+@media (min-width: 64rem) {
+    header {
+        grid-template-columns: 2fr 3fr;
+    }
 
+    #Projects {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
