@@ -1,58 +1,74 @@
-html{
+html {
     font-size: 62.5%;
     scroll-behavior: smooth;
 }
 
-*{
+:root {
+    --principal: #080707;
+    --secundario: #161b1e;
+    --cards: #1f294b;
+    --fondo: #1d2331;
+    --texto: #7d7e81;
+    --color6: #ebebeb;
+    --detalles: #ff5733;
+}
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    color: #6BB5E3;
+    color: var(--color6);
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
 }
-p{
+
+p {
     font-size: 1.8rem;
 }
 
 /*Header*/
-header{
+header {
     width: 100%;
     height: 10rem;
-    background-color: #000B20;
+    background-color: var(--principal);
     display: grid;
     grid-template-columns: 2fr 3fr;
     font-size: 2rem;
-    border-bottom: 0.1rem solid #052E5B;
     position: fixed;
     top: 0;
 }
 
 
-nav{
+nav {
     align-content: center;
 }
 
-.menu{
+.menu {
     display: flex;
     justify-content: space-evenly;
     list-style: none;
 }
-.menu li a{
+
+.menu li a {
     text-decoration-line: none;
+    color: var(--texto);
 }
 
+.menu li a:hover {
+    color: var(--detalles);
+}
 
 /*Content*/
-body{
-    background-color: #000B20;
+body {
+    background-color: var(--fondo);
 }
-main{
+
+main {
     width: 90%;
     height: auto;
     margin: auto;
 }
 
-#intro{
+#intro {
     width: 50%;
     margin: auto;
     margin-top: 15rem;
@@ -60,58 +76,89 @@ main{
 
 }
 
-#intro h1{
+#intro h1 {
     font-size: 5rem;
 }
-#intro p{
+
+#intro p {
     font-size: 3rem;
     margin-top: 2rem;
 }
 
 
 /*Projects*/
-h2{
-font-size: 3rem;
-margin-top: 8rem;
-margin-bottom: 3rem;
+h2 {
+    font-size: 3rem;
+    margin-top: 8rem;
+    margin-bottom: 3rem;
 }
-#Projects{
+
+#Projects {
     display: flex;
     justify-content: space-between;
     scroll-margin-top: 20rem;
 }
-.project{
-    width: 25rem;
-    height: 30rem;
-    background-color: #001734;
-    display: flex;
-    flex-direction: column;
-    border: 0.1rem solid #052E5B;
+
+.projects {
+    width: 30rem;
+    height: 35rem;
     border-radius: 1rem;
-    align-items: center;
+    background-color: var(--cards);
+    position: relative;
 }
 
-.img__pagina{
-    width: 20rem;
-    height: 20rem;
-    margin-bottom: 1rem;
-    margin-top: 2rem;
+.projects:hover p{
+    color: var(--detalles);
 }
-.github__logo{
+
+.enlace {
+    display: inline-block;
+    padding: 2.5rem;
+    height: 100%;
+    text-decoration: none;
+}
+
+.projects p {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.img__paginas {
     display: block;
-    margin: auto;
+    width: 25rem;
+    height: 25rem;
+}
+
+
+.project__infos{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 4rem;
     height: 4rem;
+
 }
 
-#Skills{
+.github__logo {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    transition: all 1s;
+}
+.github__logo:hover {
+    transform: scale(1.2);
+}
+
+#Skills {
     width: 100%;
     height: auto;
     display: flex;
     justify-content: space-evenly;
 }
 
-.skill__logo p{
+.skill__logo p {
     text-align: center;
     margin-bottom: 2rem;
     text-decoration: underline;
@@ -119,7 +166,8 @@ margin-bottom: 3rem;
     text-underline-offset: 0.7rem;
     text-decoration-thickness: 0.3rem;
 }
-.skill__logo img{
+
+.skill__logo img {
     display: block;
     margin: auto;
     width: 8rem;
@@ -127,15 +175,17 @@ margin-bottom: 3rem;
 }
 
 
-footer{
-    background-color: #00142D;
+footer {
+    background-color: var(--secundario);
     width: 100%;
     height: 60rem;
     margin-top: 5rem;
     padding-top: 8rem;
+    /* border-top: 0.2rem solid var(--color6); */
+
 }
 
-#Formulario{
+#Formulario {
     display: flex;
     flex-direction: column;
     width: 35rem;
@@ -146,31 +196,31 @@ footer{
     border-radius: 2rem;
 }
 
-#Formulario input{
+#Formulario input {
     display: block;
-margin-top: 2rem;
-color: #141414;
-min-height: 4rem;
-border-radius: 0.5rem;
-padding-left: 1rem;
-border: none;
+    margin-top: 2rem;
+    color: #141414;
+    min-height: 4rem;
+    border-radius: 0.5rem;
+    padding-left: 1rem;
+    border: none;
 }
 
-#Textarea{
+#Textarea {
     min-height: 8rem;
     margin-top: 2rem;
     resize: none;
-border-radius: 0.5rem;
-padding-left: 1rem;
-color: #141414;
+    border-radius: 0.5rem;
+    padding-left: 1rem;
+    color: #141414;
 }
 
-h3{
-font-size: 2.5rem;
-margin-top: 2rem;
+h3 {
+    font-size: 2.5rem;
+    margin-top: 2rem;
 }
 
-#Enviar{
+#Enviar {
     margin-top: 2rem;
     width: 12rem;
     min-height: 4rem;
@@ -182,7 +232,7 @@ margin-top: 2rem;
     transition: 0.3s;
 }
 
-#Enviar:hover{
+#Enviar:hover {
     background-color: #6BB5E3;
     color: #00142D;
 }
@@ -190,53 +240,61 @@ margin-top: 2rem;
 
 /* Media queris */
 /* Movil */
-@media (min-width: 20rem){
-header{
-    grid-template-columns: 1fr;
-}
-#intro{
-    width: 90%;
-}
-#Projects{
-flex-direction: row;
-justify-content: center;
-}
-.project{
-    width: 30rem;
-    height: 35rem;
-}
-.img__pagina{
-    width: 25rem;
-    height: 25rem;
-}
+@media (min-width: 20rem) {
+    header {
+        grid-template-columns: 1fr;
+    }
 
-#Skills{
-    flex-direction: column;
-    margin-top: 2rem;
-}
+    #intro {
+        width: 90%;
+    }
+
+    #Projects {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .project {
+        width: 30rem;
+        height: 35rem;
+    }
+
+    .img__pagina {
+        width: 25rem;
+        height: 25rem;
+    }
+
+    #Skills {
+        flex-direction: column;
+        margin-top: 2rem;
+    }
 
 
 }
 
 /* Tablet */
-@media (min-width: 48rem){
-header{
-    grid-template-columns: 2fr 3fr;
-}
-#intro{
-    width: 80%;
-}
-#Projects{
-flex-direction: column;
-justify-content: space-between;
-}
-.project{
-    width: 30rem;
-    height: 35rem;
-}
-#Skills{
-    flex-direction: row;
-    justify-content: space-evenly;
-}
+@media (min-width: 48rem) {
+    header {
+        grid-template-columns: 2fr 3fr;
+    }
+
+    #intro {
+        width: 80%;
+    }
+
+    #Projects {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .project {
+        width: 30rem;
+        height: 35rem;
+    }
+
+    #Skills {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
 
 }

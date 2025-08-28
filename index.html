@@ -33,16 +33,32 @@
 
         <h2>Mis Proyectos</h2>
         <section id="Projects">
-            <div class="project" class="project" target="_blank">
-                <a href="https://administrador-de-extenciones.vercel.app/" target="_blank" rel="noopener noreferrer">
-                    <img src="./assets/desktop-design-dark.jpg" alt="Proyecto1" class="img__pagina">
-                </a>
-                <div class="project__info">
+            <div class="projects">
+                <a href="https://administrador-de-extenciones.vercel.app/" target="_blank" rel="noopener noreferrer" class="enlace">
+                    <img src="./assets/desktop-design-dark.jpg" alt="Proyecto1" class="img__paginas">
                     <p>Administrador de extenciones</p>
-                    <a href="https://github.com/victor599832/Administrador-de-extenciones" target="_blank">
-                        <img src="./assets/icons8-github.svg" alt="Github" class="github__logo">
-                    </a>
-                </div>
+                </a>
+                <a href="https://github.com/victor599832/Administrador-de-extenciones" target="_blank" class="project__infos">
+                    <img src="./assets/icons8-github.svg" alt="Github" class="github__logo">
+                </a>
+            </div>
+             <div class="projects">
+                <a href="https://advice-generator-app-psi-topaz.vercel.app/" target="_blank" rel="noopener noreferrer" class="enlace">
+                    <img src="./assets/active-states.jpg " alt="Proyecto1" class="img__paginas">
+                    <p>Generadora de consejos</p>
+                </a>
+                <a href="https://github.com/victor599832/Advice-generator-app" target="_blank" class="project__infos">
+                    <img src="./assets/icons8-github.svg" alt="Github" class="github__logo">
+                </a>
+            </div>
+             <div class="projects">
+                <a href="https://contact-form-main-chi.vercel.app/" target="_blank" rel="noopener noreferrer" class="enlace">
+                    <img src="./assets/desktop-design.jpg" alt="Proyecto1" class="img__paginas">
+                    <p>Formulario de Contacto</p>
+                </a>
+                <a href="https://github.com/victor599832/contact-form-main" target="_blank" class="project__infos">
+                    <img src="./assets/icons8-github.svg" alt="Github" class="github__logo">
+                </a>
             </div>
         </section>
 
@@ -74,22 +90,22 @@
     <footer>
         <form action="" method="post" id="Formulario">
             <h3>Contacto</h3>
-                <input type="text" name="Nombre" id="Nombre" placeholder="Ingrese su nombre" >
-                <input type="text" name="Email" id="Email" placeholder="Ingrese su correo" >
-                <input type="text" name="Asunto" id="Asunto" placeholder="Ingrese el asunto" >
-                <textarea  name="Mensaje" id="Textarea" placeholder="Escriba su mensaje" >
+            <input type="text" name="Nombre" id="Nombre" placeholder="Ingrese su nombre">
+            <input type="text" name="Email" id="Email" placeholder="Ingrese su correo">
+            <input type="text" name="Asunto" id="Asunto" placeholder="Ingrese el asunto">
+            <textarea name="Mensaje" id="Textarea" placeholder="Escriba su mensaje">
                 </textarea>
-                <!-- <input type="text" name="Mensaje" id="Textarea" placeholder="Escriba su mensaje"> -->
-                <button type="submit" id="Enviar">Enviar</button>
-            </form>
+            <!-- <input type="text" name="Mensaje" id="Textarea" placeholder="Escriba su mensaje"> -->
+            <button type="submit" id="Enviar">Enviar</button>
+        </form>
     </footer>
 
-<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script type="text/javascript">
-   (function(){
-       emailjs.init('ZoYqTQCf2hQbeu4Gy');
-   })();
-</script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init('ZoYqTQCf2hQbeu4Gy');
+        })();
+    </script>
 
 
 </body>
